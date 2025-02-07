@@ -36,7 +36,7 @@ pipeline {
             }
         }
 
-        steps('Unit Tests') {
+        stage('Unit Tests') {
             steps {
                 sh 'pytest --maxfail=1'
             }
