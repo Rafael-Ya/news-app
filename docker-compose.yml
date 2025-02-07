@@ -6,16 +6,11 @@ services:
       - "5000:5000"
     environment:
       - NEWS_API_KEY=${NEWS_API_KEY}
-      - DATABASE_URL=postgresql://postgres:secret@db:5432/newsdb
-      - FLASK_APP=app.py
+      - FLASK_APP=app.main
       - FLASK_ENV=development
-    depends_on:
-      - db
     volumes:
       - .:/app
     restart: unless-stopped
-    networks:
-      - app-network
 
   db:
     image: postgres:13

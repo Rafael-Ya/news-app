@@ -23,7 +23,6 @@ def get_magnificent_seven_news():
     # Get news for each company
     for company in companies:
         try:
-            # This call returns a dictionary with an 'articles' list
             news = newsapi.get_everything(
                 q=f'{company} stock',
                 language='en',
@@ -32,24 +31,9 @@ def get_magnificent_seven_news():
                 sort_by='publishedAt'
             )
             
-            # Each article in news['articles'] looks like this:
-            # {
-            #     'title': 'Some News Title',
-            #     'description': 'News description text...',
-            #     'url': 'https://...',
-            #     'publishedAt': '2024-02-20T15:30:00Z',
-            #     ...
-            # }
-            
             # Add company name to each article
             for article in news['articles']:
                 article['company'] = company
-                print("\nArticle data:")
-                print(f"Company: {article['company']}")
-                print(f"Title: {article['title']}")
-                print(f"Description: {article['description']}")
-                print(f"URL: {article['url']}")
-                print(f"Published: {article['publishedAt']}")
                 all_news.append(article)
                 
         except Exception as e:
