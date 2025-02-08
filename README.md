@@ -47,3 +47,11 @@ A local web application that displays recent news about the Magnificent Seven te
 - Updates automatically when you refresh the page
 - Links to full articles
 - Responsive design for all devices
+
+Links to the CI part tools that was used:
+
+1- flake8 : https://realtpython.com/python-pep8 
+   # This is the Lint part of the workflow of the CI and this tool is using the pricipal of pep8 to maintain python community standards for consistency
+
+2- 
+   
