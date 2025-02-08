@@ -4,6 +4,7 @@ from .news_scraper import get_magnificent_seven_news
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
     news_items = get_magnificent_seven_news()
