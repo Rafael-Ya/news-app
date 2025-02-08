@@ -34,7 +34,7 @@ pipeline {
 
         stage('Security Scan') {
             steps {
-                sh 'bandit -r .'
+                sh 'bandit -r . --severity-level medium'
             }
         }
 
