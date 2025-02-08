@@ -28,7 +28,7 @@ pipeline {
 
         stage('Lint') {
             steps {
-                sh(script: 'flake8 . || true', returnstatus: true)
+                sh(script: 'flake8 . || true', returnStatus: true)
             }
         }
 
