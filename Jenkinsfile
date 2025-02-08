@@ -40,7 +40,7 @@ pipeline {
 
         stage('Unit Tests') {
             steps {
-                sh 'pytest --maxfail=1'
+                sh 'PYTHONPATH=$PYTHONPATH:. pytest tests/ --maxfail=1'
             }
         }
     }
